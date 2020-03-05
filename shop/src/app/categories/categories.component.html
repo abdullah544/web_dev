@@ -1,0 +1,19 @@
+<!-- <a>Categories</a>
+<nav>
+    <a (click)="selectCategory(products1)" routerLink="/categories/categoryId/products"> Phones</a> <br>
+    <a (click)="selectCategory(products2)" routerLink="/categories/categoryId/products"> Cubes</a> <br>
+    <a (click)="selectCategory(products3)" routerLink="/categories/categoryId/products"> Watches</a> <br>
+    <a (click)="selectCategory(products4)" routerLink="/categories/categoryId/products"> Laptops</a>
+</nav> -->
+
+<div *ngIf="category"> 
+  <h2>{{category.name | uppercase}} List</h2>
+  <div>
+      <label>name:
+          <input [(ngModel)]="category.name" placeholder="name"/>
+          <span>id: {{category.id}}</span>
+      </label>
+  </div>
+</div>
+
+<app-category [category]="selectedCategory"></app-category>

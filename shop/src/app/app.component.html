@@ -1,0 +1,14 @@
+<h1>{{title}}</h1>
+<app-categories></app-categories>
+
+<a>Categories</a>
+<nav>
+    <a (click)="selectCategory(products1)" routerLink="/categories/categoryId/products"> Phones</a> <br>
+    <a (click)="selectCategory(products2)" routerLink="/categories/categoryId/products"> Cubes</a> <br>
+    <a (click)="selectCategory(products3)" routerLink="/categories/categoryId/products"> Watches</a> <br>
+    <a (click)="selectCategory(products4)" routerLink="/categories/categoryId/products"> Laptops</a>
+</nav>
+
+<div>
+    <router-outlet></router-outlet>
+</div>

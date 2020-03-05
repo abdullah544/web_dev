@@ -1,0 +1,19 @@
+<h2> Products of Category </h2> 
+
+<div class="products">
+    <div class="element" *ngFor="let product of products">
+        <h3 class="name">
+            <a [title]="product.name + 'details'" (click)="selectProduct(product)">
+                {{product.name}}
+            </a> 
+        </h3>
+        <div class="details">
+            <a routerLink="/products/productId" (click)="selectProduct(product)" class="info">Show Details</a>
+        </div>
+
+        <!-- <div class="catId">categoryID: {{product.categoryID}}</div> -->
+
+    </div>
+</div>
+
+<!-- href="{{selectProducts.link}}" -->
