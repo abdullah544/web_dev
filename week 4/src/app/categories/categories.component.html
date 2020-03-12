@@ -1,0 +1,10 @@
+<h2>Products categories</h2>
+<ul class="categories">
+  <li *ngFor="let category of categories">
+    <a (click)="onSelect(category)" routerLink="/detail/{{category.id}}">
+      <span class="badge">{{category.id}}</span> {{category.name}}
+    </a>
+  </li>
+</ul>
+
+<app-category-detail [category]="selectedCategory"></app-category-detail>
